@@ -1,21 +1,18 @@
 <template>
   <div id="bottomLeft2">
     <div class="bg-color-black">
-
-      <div class="d-flex pt-2 pl-2 module-item">
-
+      <div class="d-flex pt-2 pl-2">
         <div class="d-flex" @click="activeModule = 0" :style="{ color: activeModule === 0 ? '#5cd9e8' : '#fff' }">
           <span>
             <icon name="chart-bar"></icon>
           </span>
-          <span class="fs-xl text mx-2" :style="{ color: activeModule === 0 ? '#5cd9e8' : '#fff' }">新风机</span>
+<!--          <span class="fs-xl text mx-2" :style="{ color: activeModule === 0 ? '#5cd9e8' : '#fff' }">新风机</span>-->
         </div>
-
       </div>
       <div v-if="activeModule === 0">
         <bottomLeftChart />
       </div>
-      <div v-if="activeModule === 1">
+      <!-- <div v-if="activeModule === 1">
         <bottomLeftChart1 />
       </div>
       <div v-if="activeModule === 2">
@@ -41,7 +38,7 @@
       </div>
       <div v-if="activeModule === 9">
         <bottomLeftChart9 />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -49,15 +46,15 @@
 <script>
 
 import bottomLeftChart from "@/components/echart/second/bottomLeftChart";
-import bottomLeftChart1 from "@/components/echart/second/bottomLeftChart1";
-import bottomLeftChart2 from "@/components/echart/second/bottomLeftChart2";
-import bottomLeftChart3 from "@/components/echart/second/bottomLeftChart3";
-import bottomLeftChart4 from "@/components/echart/second/bottomLeftChart4";
-import bottomLeftChart5 from "@/components/echart/second/bottomLeftChart5";
-import bottomLeftChart6 from "@/components/echart/second/bottomLeftChart6";
-import bottomLeftChart7 from "@/components/echart/second/bottomLeftChart7";
-import bottomLeftChart8 from "@/components/echart/second/bottomLeftChart8";
-import bottomLeftChart9 from "@/components/echart/second/bottomLeftChart9";
+// import bottomLeftChart1 from "@/components/echart/second/bottomLeftChart1";
+// import bottomLeftChart2 from "@/components/echart/second/bottomLeftChart2";
+// import bottomLeftChart3 from "@/components/echart/second/bottomLeftChart3";
+// import bottomLeftChart4 from "@/components/echart/second/bottomLeftChart4";
+// import bottomLeftChart5 from "@/components/echart/second/bottomLeftChart5";
+// import bottomLeftChart6 from "@/components/echart/second/bottomLeftChart6";
+// import bottomLeftChart7 from "@/components/echart/second/bottomLeftChart7";
+// import bottomLeftChart8 from "@/components/echart/second/bottomLeftChart8";
+// import bottomLeftChart9 from "@/components/echart/second/bottomLeftChart9";
 
 export default {
   data() {
@@ -70,18 +67,18 @@ export default {
   components: {
 
     bottomLeftChart,
-    bottomLeftChart1,
-    bottomLeftChart2,
-    bottomLeftChart3,
-    bottomLeftChart4,
-    bottomLeftChart5,
-    bottomLeftChart6,
-    bottomLeftChart7,
-    bottomLeftChart8,
-    bottomLeftChart9,
+    // bottomLeftChart1,
+    // bottomLeftChart2,
+    // bottomLeftChart3,
+    // bottomLeftChart4,
+    // bottomLeftChart5,
+    // bottomLeftChart6,
+    // bottomLeftChart7,
+    // bottomLeftChart8,
+    // bottomLeftChart9,
 
   },
-  mounted() {},
+  mounted() { },
   methods: {
     handleDateChange(value) {
       console.log('Selected date range:', value);
@@ -103,30 +100,36 @@ export default {
   height: 9.5rem;
   min-width: 3.75rem;
   border-radius: 0.0625rem;
+
   .bg-color-black {
     height: 9.0625rem;
     border-radius: 0.125rem;
   }
+
   .text {
     color: #c3cbde;
   }
+
   .chart-box {
     margin-top: 1rem;
     width: 2.125rem;
     height: 2.125rem;
+
     .active-ring-name {
       padding-top: 0.125rem;
     }
   }
 }
+
 .module-item {
-  height: 100px;
+  height: 50px;
 }
+
 .module-item .text {
   font-size: 18px;
 }
 
 .module-item icon {
-  font-size: 30px;
+  font-size: 50px;
 }
 </style>

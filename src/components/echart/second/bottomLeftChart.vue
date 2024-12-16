@@ -1,46 +1,45 @@
 <template>
   <div>
+<!--    <div class="block">-->
+<!--      <span style="font-size: 20px">-->
+<!--        历史数据:-->
+<!--      </span>-->
+<!--      <el-date-picker-->
+<!--          style="-->
+<!--          height: 35px;-->
+<!--           font-weight: bold;-->
+<!--           background-color: #0f1325;"-->
+<!--          v-model="value2"-->
+<!--          type="datetimerange"-->
+<!--          :picker-options="pickerOptions"-->
+<!--          range-separator="至"-->
+<!--          start-placeholder="开始日期"-->
+<!--          end-placeholder="结束日期"-->
+<!--          align="right"-->
+<!--          class="custom-date-picker">-->
+<!--      </el-date-picker>-->
+<!--    </div>-->
+<!--    <div class="block">-->
+<!--      <span style="font-size: 20px">-->
+<!--       预测时长:-->
+<!--      </span>-->
+<!--      <el-date-picker-->
+<!--          style="-->
+<!--          height: 35px;-->
+<!--           font-weight: bold;-->
+<!--           background-color: #0f1325;"-->
+<!--          v-model="value3"-->
+<!--          type="datetimerange"-->
+<!--          :picker-options="pickerOptions"-->
+<!--          range-separator="至"-->
+<!--          start-placeholder="开始日期"-->
+<!--          end-placeholder="结束日期"-->
+<!--          align="right"-->
+<!--          class="custom-date-picker">-->
+<!--      </el-date-picker>-->
 
-    <div class="block">
-      <span style="font-size: 20px">
-        历史数据:
-      </span>
-      <el-date-picker
-          style="
-          height: 35px;
-           font-weight: bold;
-           background-color: #0f1325;"
-          v-model="value2"
-          type="datetimerange"
-          :picker-options="pickerOptions"
-          range-separator="至"
-          start-placeholder="开始日期"
-          end-placeholder="结束日期"
-          align="right"
-          class="custom-date-picker">
-      </el-date-picker>
-    </div>
-    <div class="block">
-      <span style="font-size: 20px">
-       预测时长:
-      </span>
-      <el-date-picker
-          style="
-          height: 35px;
-           font-weight: bold;
-           background-color: #0f1325;"
-          v-model="value3"
-          type="datetimerange"
-          :picker-options="pickerOptions"
-          range-separator="至"
-          start-placeholder="开始日期"
-          end-placeholder="结束日期"
-          align="right"
-          class="custom-date-picker">
-      </el-date-picker>
-
-    </div>
-    <div class="block"> <el-button type="primary">确认时间</el-button></div>
+<!--    </div>-->
+<!--    <div class="block"> <el-button type="primary">确认时间</el-button></div>-->
 
 
     <div id="bottomLeftChart" style="width:100%;height:6.0rem;"></div>

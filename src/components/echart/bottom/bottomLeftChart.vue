@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="bottomLeftChart" style="width:100%;height:6.0rem;"></div>
+    <div id="bottomLeftChart" style="width:100%;height:9.2rem;"></div>
   </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
 
       roundWsList: [],
       roundPowerList: [],
-      yd15List: []
+      // yd15List: []
     };
   },
   mixins: [echartMixins],
@@ -30,14 +30,14 @@ export default {
       axios.get('/api/power/get_button_left/fengone')
           .then(response => {
             console.log(response.data);
-            const [timeList, windspeedList, prepowerList,  roundWsList, roundPowerList, yd15List] = response.data;
+            const [timeList, windspeedList, prepowerList,  roundWsList, roundPowerList] = response.data;
             this.timeList = timeList;
             this.windspeedList = windspeedList;
             this.prepowerList = prepowerList;
 
             this.roundWsList = roundWsList;
             this.roundPowerList = roundPowerList;
-            this.yd15List = yd15List;
+            // this.yd15List = yd15List;
             this.draw();
           })
           .catch(error => {
@@ -70,7 +70,7 @@ export default {
           }
         },
         legend: {
-          data: ["WINDSPEED", "PREPOWER","ROUND_ws", "ROUND_power", "YD15"],
+          data: ["WINDSPEED", "PREPOWER","ROUND_ws", "ROUND_power"],
           textStyle: {
             color: "#B4B4B4"
           },
@@ -171,20 +171,20 @@ export default {
             },
             data: this.roundPowerList
           },
-          {
-            name: "YD15",
-            type: "line",
-            smooth: true,
-            showAllSymbol: true,
-            symbol: "emptyCircle",
-            symbolSize: 1,
-            itemStyle: {
-              normal: {
-                color: "#32CD32"
-              }
-            },
-            data: this.yd15List
-          }
+          // {
+          //   name: "YD15",
+          //   type: "line",
+          //   smooth: true,
+          //   showAllSymbol: true,
+          //   symbol: "emptyCircle",
+          //   symbolSize: 1,
+          //   itemStyle: {
+          //     normal: {
+          //       color: "#32CD32"
+          //     }
+          //   },
+          //   data: this.yd15List
+          // }
         ]
       };
       this.chart.setOption(option);

@@ -128,7 +128,7 @@ export default {
   min-width: 3.75rem;
   border-radius: 0.0625rem;
   .bg-color-black {
-    height: 4.8125rem;
+    height: 6.8125rem;
     border-radius: 0.125rem;
   }
   .text {

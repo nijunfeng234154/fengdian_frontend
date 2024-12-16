@@ -11,18 +11,10 @@
             <dv-decoration-8 :color="['#568aea', '#000000']" style="width:2.5rem;height:.625rem;" />
             <div class="title">
               <span class="title-text">数据可视化平台</span>
-              <dv-decoration-6
-                  class="title-bototm"
-                  :reverse="true"
-                  :color="['#50e3c2', '#67a1e5']"
-                  style="width:3.125rem;height:.1rem;"
-              />
+              <dv-decoration-6 class="title-bototm" :reverse="true" :color="['#50e3c2', '#67a1e5']"
+                style="width:3.125rem;height:.1rem;" />
             </div>
-            <dv-decoration-8
-                :reverse="true"
-                :color="['#568aea', '#000000']"
-                style="width:2.5rem;height:.625rem;"
-            />
+            <dv-decoration-8 :reverse="true" :color="['#568aea', '#000000']" style="width:2.5rem;height:.625rem;" />
           </div>
           <dv-decoration-10 style="width:33.3%;height:.0625rem; transform: rotateY(180deg);" />
         </div>
@@ -30,35 +22,23 @@
         <!-- 标题选项层-->
         <div class="d-flex jc-between px-2">
           <div class="d-flex" style="width: 40%">
-            <div
-                class="react-right ml-4"
-                style="width: 6.25rem; text-align: left;background-color: #0f1325;"
-                @click="currentTab = 0"
-                :class="{ 'active': currentTab === 0 }"
-            >
+            <div class="react-right ml-4" style="width: 6.25rem; text-align: left;background-color: #0f1325;"
+              @click="currentTab = 0" :class="{ 'active': currentTab === 0 }">
               <span class="react-before"></span>
               <span class="text" style="margin-left: 70px;">数据分析</span>
             </div>
-            <div class="react-right ml-3" style="background-color: #0f1325;"
-                 @click="currentTab = 1"
-                 :class="{ 'active': currentTab === 1 }"
-            >
+            <div class="react-right ml-3" style="background-color: #0f1325;" @click="currentTab = 1"
+              :class="{ 'active': currentTab === 1 }">
               <span class="text">滚动预测</span>
             </div>
           </div>
-          <div style="width: 40%" class="d-flex"
-               @click="currentTab = 2"
-               :class="{ 'active': currentTab === 2 }"
-          >
+          <div style="width: 40%" class="d-flex" @click="currentTab = 2" :class="{ 'active': currentTab === 2 }">
             <div class="react-left  mr-3">
               <span class="text fw-b">接口说明文档</span>
             </div>
-            <div
-                class="react-left mr-4"
-                style="width: 6.25rem; background-color: #0f1325; text-align: right;"
-            >
+            <div class="react-left mr-4" style="width: 6.25rem; background-color: #0f1325; text-align: right;">
               <span class="react-after"></span>
-              <span class="text">{{currentDateTime}}</span>
+              <span class="text">{{ currentDateTime }}</span>
             </div>
           </div>
         </div>
@@ -151,6 +131,7 @@ export default {
 
 <style scoped>
 @import "../assets/scss/index.scss";
+
 /*.login {*/
 /*  display: flex;*/
 /*  flex-direction: column;*/
@@ -170,17 +151,20 @@ form {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .form-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
   width: 100%;
 }
+
 label {
   margin-bottom: 5px;
   font-size: 16px;
   font-weight: bold;
 }
+
 input[type="text"],
 input[type="password"] {
   width: 100%;
@@ -190,11 +174,13 @@ input[type="password"] {
   font-size: 16px;
   margin-bottom: 20px;
 }
+
 input[type="text"]:focus,
 input[type="password"]:focus {
   border-bottom: 2px solid #007aff;
   outline: none;
 }
+
 button[type="submit"] {
   margin-top: 10px;
   padding: 10px 20px;
@@ -206,15 +192,18 @@ button[type="submit"] {
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
+
 button[type="submit"]:hover {
   background-color: #0062cc;
 }
+
 .loading {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
 }
+
 .spinner {
   width: 50px;
   height: 50px;
@@ -223,10 +212,12 @@ button[type="submit"]:hover {
   border-top-color: #007aff;
   animation: spin 0.8s linear infinite;
 }
+
 .text {
   margin-top: 10px;
   font-size: 16px;
 }
+
 .error {
   margin-top: 10px;
   color: #ff0000;
